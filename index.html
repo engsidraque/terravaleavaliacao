@@ -288,7 +288,7 @@
         </a>
 
         <nav aria-label="Navegação principal">
-          <a href="#servicos">Serviços</a>
+          <a href="#servicos-links">Serviços</a>
           <a href="#processo">Processo</a>
           <a href="#areas">Atendimento</a>
           <a href="#faq">Condições</a>
@@ -305,6 +305,59 @@
       </div>
     </div>
   </header>
+<section id="servicos-links" class="container" style="padding:34px 0 10px">
+  <div class="section-head">
+    <h2>Serviços</h2>
+    <p>Escolha o tipo de laudo e solicite orçamento.</p>
+  </div>
+
+  <div class="services-grid">
+    <a class="panel s-card" href="/laudo-avaliacao-imovel-sao-paulo/">
+      <h3>Imóvel (Casa/Apto)</h3>
+      <p>Laudo de avaliação para compra, venda, financiamento e garantias.</p>
+    </a>
+
+    <a class="panel s-card" href="/laudo-avaliacao-terreno-sao-paulo/">
+      <h3>Terreno</h3>
+      <p>Avaliação de terreno urbano com critérios técnicos e conclusão objetiva.</p>
+    </a>
+
+    <a class="panel s-card" href="/laudo-avaliacao-para-inventario/">
+      <h3>Inventário / Partilha</h3>
+      <p>Laudo para formalizar valor do bem em inventário.</p>
+    </a>
+
+    <a class="panel s-card" href="/laudo-avaliacao-para-divorcio/">
+      <h3>Divórcio</h3>
+      <p>Laudo para divisão patrimonial com base técnica.</p>
+    </a>
+
+    <a class="panel s-card" href="/laudo-avaliacao-para-compra-e-venda/">
+      <h3>Compra e Venda</h3>
+      <p>Defina valor para negociar com segurança.</p>
+    </a>
+
+    <a class="panel s-card" href="#contato">
+      <h3>Orçamento</h3>
+      <p>Agende e peça orçamento direto por WhatsApp.</p>
+    </a>
+  </div>
+</section>
+
+<style>
+  .services-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:12px;
+  }
+  .s-card{ text-decoration:none; }
+  .s-card h3{ margin:0 0 6px; font-size:16px; }
+  .s-card p{ margin:0; color:rgba(11,18,32,.75); font-size:13.5px; }
+  .s-card:hover{ transform:translateY(-1px); }
+  @media (max-width:980px){
+    .services-grid{ grid-template-columns:1fr; }
+  }
+</style>
 
   <main id="inicio" class="hero">
     <div class="container">
@@ -557,6 +610,7 @@
   </script>
 </body>
 </html>
+
 
 
 
