@@ -3,23 +3,269 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Laudo de Avaliação para Compra e Venda em São Paulo | Terravale Avaliação</title>
   <meta name="description" content="Laudo de avaliação para compra e venda em São Paulo/SP conforme ABNT NBR 14653. Para imóveis e terrenos. Orçamento e agendamento via WhatsApp." />
   <link rel="canonical" href="https://terravaleavaliacao.com.br/laudo-avaliacao-para-compra-e-venda/" />
   <meta name="robots" content="index,follow" />
   <link rel="icon" href="/favicon.png" type="image/png" />
+
   <style>
-    body{font-family:system-ui,Segoe UI,Roboto,Arial;margin:0;line-height:1.55;color:#0b1220}
-    header,main,footer{max-width:980px;margin:0 auto;padding:18px}
-    .top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
-    .brand{display:flex;align-items:center;gap:10px}
-    .brand img{width:44px;height:44px;object-fit:contain;border-radius:12px;border:1px solid rgba(0,0,0,.12)}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 14px;border-radius:999px;border:1px solid rgba(0,0,0,.12);text-decoration:none}
-    .btn.primary{background:#5b2cff;color:#fff;border-color:transparent}
-    .card{border:1px solid rgba(0,0,0,.12);border-radius:18px;padding:16px;margin:14px 0}
-    .muted{color:rgba(11,18,32,.72)}
+    :root{
+      --bg:#f7f8fc;
+      --paper:#ffffff;
+      --ink:#0b1220;
+      --muted:rgba(11,18,32,.70);
+      --line:rgba(11,18,32,.12);
+      --brand:#5b2cff;
+      --brand2:#3d21b6;
+      --shadow:0 16px 40px rgba(11,18,32,.08);
+      --radius:22px;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      font-family:system-ui,Segoe UI,Roboto,Arial;
+      margin:0;
+      line-height:1.55;
+      color:var(--ink);
+      background:
+        radial-gradient(1200px 480px at 20% 0%, rgba(91,44,255,.10), transparent 60%),
+        radial-gradient(900px 420px at 90% 10%, rgba(61,33,182,.10), transparent 55%),
+        var(--bg);
+    }
+
+    header,main,footer{
+      max-width:1050px;
+      margin:0 auto;
+      padding:18px;
+    }
+
+    /* Topbar */
+    .top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      background:rgba(255,255,255,.82);
+      backdrop-filter:saturate(140%) blur(10px);
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:12px 14px;
+      box-shadow:0 10px 22px rgba(11,18,32,.05);
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      text-decoration:none;
+      color:inherit;
+      padding:4px 6px;
+      border-radius:14px;
+    }
+
+    .brand img{
+      width:44px;height:44px;object-fit:contain;
+      border-radius:12px;border:1px solid var(--line);background:#fff;
+    }
+
+    .brand strong{font-size:15px}
+    .brand .sub{font-size:13px;color:var(--muted)}
+
+    /* Buttons */
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:12px 16px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      text-decoration:none;
+      font-weight:700;
+      letter-spacing:.2px;
+      transition:transform .08s ease, box-shadow .08s ease;
+      white-space:nowrap;
+    }
+
+    .btn:active{transform:translateY(1px)}
+
+    .btn.primary{
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+      color:#fff;
+      border-color:transparent;
+      box-shadow:0 14px 30px rgba(91,44,255,.22);
+    }
+
+    .btn.ghost{
+      background:transparent;
+      color:var(--ink);
+    }
+
+    /* Hero */
+    .hero{
+      margin-top:14px;
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .hero-inner{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:18px;
+      padding:22px;
+      align-items:center;
+    }
+
+    @media (max-width: 900px){
+      .hero-inner{grid-template-columns:1fr}
+    }
+
+    h1{
+      line-height:1.08;
+      margin:0 0 10px;
+      font-size:40px;
+      letter-spacing:-.5px;
+    }
+
+    @media (max-width: 520px){
+      h1{font-size:32px}
+    }
+
+    .lead{margin:0;color:var(--muted);font-size:16px}
+
+    .badges{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:14px;
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:#fff;
+      font-size:13px;
+      color:rgba(11,18,32,.82);
+    }
+
+    .badge b{color:var(--ink)}
+
+    .hero-img{
+      width:100%;
+      height:auto;
+      border-radius:18px;
+      border:1px solid var(--line);
+      display:block;
+      object-fit:cover;
+    }
+
+    .caption{
+      margin:10px 0 0;
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    /* Sections */
+    .grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+      margin-top:14px;
+    }
+
+    @media (max-width: 900px){
+      .grid{grid-template-columns:1fr}
+    }
+
+    .card{
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:16px;
+      box-shadow:0 10px 22px rgba(11,18,32,.04);
+    }
+
+    .card h2{
+      margin:0 0 8px;
+      font-size:18px;
+      letter-spacing:-.2px;
+    }
+
+    .muted{color:var(--muted)}
+
     ul{margin:10px 0 0 18px}
-    h1{line-height:1.1;margin:14px 0}
+    li{margin:6px 0}
+
+    .list-compact{margin-left:16px}
+    .list-compact li{margin:4px 0}
+
+    /* Trust strip */
+    .trust{
+      margin-top:14px;
+      background:linear-gradient(180deg, rgba(91,44,255,.06), rgba(255,255,255,1));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:16px;
+      box-shadow:0 10px 22px rgba(11,18,32,.04);
+    }
+
+    .trust-title{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .trust-title h2{margin:0;font-size:18px}
+    .trust-title p{margin:6px 0 0;color:var(--muted)}
+
+    .trust-cols{
+      margin-top:12px;
+      display:grid;
+      grid-template-columns:1fr 1fr 1fr;
+      gap:12px;
+    }
+
+    @media (max-width: 900px){
+      .trust-cols{grid-template-columns:1fr}
+    }
+
+    .trust-box{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:14px;
+    }
+
+    .trust-box h3{
+      margin:0 0 6px;
+      font-size:14px;
+      letter-spacing:.1px;
+    }
+
+    .trust-box p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    /* Footer */
+    footer{
+      margin-top:14px;
+      color:var(--muted);
+      font-size:14px;
+    }
   </style>
 
   <script type="application/ld+json">
@@ -39,64 +285,137 @@
   }
   </script>
 </head>
+
 <body>
 <header>
   <div class="top">
-    <a class="brand" href="/">
+    <a class="brand" href="/" aria-label="Voltar para o início">
       <img src="/logo.png" alt="Logo Terravale Avaliação">
       <div>
         <strong>Terravale Avaliação</strong><br>
-        <span class="muted">Laudo de Avaliação em São Paulo</span>
+        <span class="sub">Laudo de Avaliação em São Paulo</span>
       </div>
     </a>
 
-    <a class="btn primary" target="_blank" rel="noopener"
-       href="https://wa.me/5511945715195?text=Olá!%20Quero%20orçamento%20para%20laudo%20de%20avaliação%20para%20COMPRA%20E%20VENDA.%20Tipo:____%20%7C%20Endereço:____%20%7C%20Metragem:____">
-      Orçamento no WhatsApp →
-    </a>
+    <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap">
+      <a class="btn ghost" href="/#servicos">Serviços</a>
+
+      <a class="btn primary" target="_blank" rel="noopener"
+         href="https://wa.me/5511945715195?text=Olá!%20Quero%20orçamento%20para%20laudo%20de%20avaliação%20para%20COMPRA%20E%20VENDA.%20Tipo:____%20%7C%20Endereço:____%20%7C%20Metragem:____%20%7C%20Objetivo:compra%20ou%20venda">
+        Orçamento no WhatsApp →
+      </a>
+    </div>
   </div>
 </header>
 
 <main>
-  <h1>Laudo de Avaliação para Compra e Venda em São Paulo</h1>
-  <p class="muted">
-    Laudo para apoiar <strong>negociação</strong> com base técnica e reduzir risco de decisões sem referência de valor,
-    conforme <strong>ABNT NBR 14653</strong>. Aplicável para imóveis e terrenos, mediante agendamento.
-  </p>
+  <section class="hero" aria-label="Apresentação do serviço">
+    <div class="hero-inner">
+      <div>
+        <h1>Laudo de Avaliação para Compra e Venda em São Paulo</h1>
+        <p class="lead">
+          Laudo técnico para <strong>negociação com segurança</strong>, redução de risco e referência de valor,
+          conforme <strong>ABNT NBR 14653</strong>. Aplicável a <strong>imóveis e terrenos</strong>, mediante agendamento.
+        </p>
 
-  <div class="card">
-    <h2 style="margin:0 0 8px">Para orçamento rápido</h2>
-    <ul>
-      <li><strong>Tipo</strong> (casa/apto/terreno)</li>
-      <li><strong>Endereço</strong></li>
-      <li><strong>Metragem</strong> aproximada</li>
-      <li>Objetivo (compra ou venda)</li>
-    </ul>
-  </div>
+        <div class="badges" aria-label="Destaques">
+          <span class="badge"><b>Conforme</b> ABNT NBR 14653</span>
+          <span class="badge"><b>Vistoria</b> técnica no local</span>
+          <span class="badge"><b>Metodologia</b> documentada</span>
+          <span class="badge"><b>Entrega</b> em PDF assinado</span>
+        </div>
 
-  <div class="card">
-    <h2 style="margin:0 0 8px">Como funciona</h2>
-    <ul>
-      <li>Orçamento e agenda</li>
-      <li>Documentos disponíveis</li>
-      <li>Vistoria</li>
-      <li>Análise</li>
-      <li>Entrega do laudo</li>
-    </ul>
-  </div>
+        <p style="margin:16px 0 0">
+          <a class="btn primary" target="_blank" rel="noopener"
+             href="https://wa.me/5511945715195?text=Olá!%20Quero%20orçamento%20para%20laudo%20de%20avaliação%20para%20COMPRA%20E%20VENDA.%20Tipo:____%20%7C%20Endereço:____%20%7C%20Metragem:____%20%7C%20Objetivo:compra%20ou%20venda">
+            Solicitar orçamento →
+          </a>
+        </p>
+      </div>
 
-  <p>
+      <div>
+        <img
+          class="hero-img"
+          src="/laudo-avaliacao-compra-venda-imovel-sao-paulo.webp"
+          alt="Laudo de avaliação para compra e venda de imóvel em São Paulo conforme ABNT NBR 14653"
+          loading="lazy"
+          decoding="async">
+        <p class="caption">
+          Relatório com critérios, premissas e conclusão de valor — adequado para apoiar decisões de compra e venda.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust" aria-label="Confiança e transparência">
+    <div class="trust-title">
+      <div>
+        <h2>O que você recebe (clareza e segurança)</h2>
+        <p>Estrutura objetiva, linguagem técnica e rastreabilidade dos dados utilizados.</p>
+      </div>
+    </div>
+
+    <div class="trust-cols">
+      <div class="trust-box">
+        <h3>Escopo definido</h3>
+        <p>Vistoria, registro fotográfico, descrição do bem, premissas e metodologia compatíveis com a finalidade do laudo.</p>
+      </div>
+
+      <div class="trust-box">
+        <h3>Conformidade técnica</h3>
+        <p>Relatório orientado pela ABNT NBR 14653, com critérios claros para sustentar a conclusão de valor.</p>
+      </div>
+
+      <div class="trust-box">
+        <h3>Entrega organizada</h3>
+        <p>PDF assinado e pronto para apresentar em negociações, processos de decisão e documentação interna.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="grid" aria-label="Informações para orçamento e etapas">
+    <div class="card">
+      <h2>Para orçamento rápido</h2>
+      <p class="muted" style="margin:0 0 6px">Envie estes dados e retornamos com valor e disponibilidade:</p>
+      <ul class="list-compact">
+        <li><strong>Tipo</strong> (casa/apto/terreno)</li>
+        <li><strong>Endereço</strong> (bairro/cidade)</li>
+        <li><strong>Metragem</strong> aproximada</li>
+        <li><strong>Objetivo</strong> (compra ou venda)</li>
+        <li><strong>Prazo desejado</strong> (se houver urgência)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Como funciona</h2>
+      <ul class="list-compact">
+        <li>Orçamento e agendamento</li>
+        <li>Conferência de documentos disponíveis</li>
+        <li>Vistoria técnica no local</li>
+        <li>Análise e elaboração do laudo</li>
+        <li>Entrega do relatório (PDF assinado)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="card" aria-label="Chamada para ação">
+    <h2>Solicitar orçamento</h2>
+    <p class="muted" style="margin:0 0 12px">
+      Para agilizar, envie: <strong>tipo</strong>, <strong>endereço</strong>, <strong>metragem</strong> e <strong>objetivo</strong>.
+    </p>
     <a class="btn primary" target="_blank" rel="noopener"
-       href="https://wa.me/5511945715195?text=Olá!%20Quero%20orçamento%20para%20laudo%20de%20avaliação%20para%20COMPRA%20E%20VENDA.%20Tipo:____%20%7C%20Endereço:____%20%7C%20Metragem:____">
+       href="https://wa.me/5511945715195?text=Olá!%20Quero%20orçamento%20para%20laudo%20de%20avaliação%20para%20COMPRA%20E%20VENDA.%20Tipo:____%20%7C%20Endereço:____%20%7C%20Metragem:____%20%7C%20Objetivo:compra%20ou%20venda">
       Pedir orçamento agora →
     </a>
-  </p>
+  </section>
 </main>
 
 <footer>
-  <p class="muted">© <span id="y"></span> Terravale Avaliação — São Paulo/SP.</p>
+  <p>© <span id="y"></span> Terravale Avaliação — São Paulo/SP.</p>
 </footer>
 
-<script>document.getElementById("y").textContent=new Date().getFullYear()</script>
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
