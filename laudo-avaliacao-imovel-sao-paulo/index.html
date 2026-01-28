@@ -45,6 +45,8 @@
       display:flex;
       align-items:center;
       gap:10px;
+      text-decoration:none;
+      color:inherit;
     }
 
     .brand img{
@@ -63,7 +65,7 @@
       border-radius:999px;
       border:1px solid rgba(0,0,0,.12);
       text-decoration:none;
-      font-weight:500;
+      font-weight:600;
     }
 
     .btn.primary{
@@ -94,13 +96,49 @@
 
     .hero-img{
       width:100%;
-      max-width:760px;
+      max-width:860px;
       height:auto;
       display:block;
       margin:0 auto;
       border-radius:18px;
       border:1px solid rgba(0,0,0,.12);
       object-fit:cover;
+    }
+
+    .trust{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:10px;
+      margin-top:12px;
+    }
+
+    .trust strong{
+      font-weight:700;
+    }
+
+    .badges{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(0,0,0,.12);
+      background:#fff;
+      font-size:14px;
+      color:rgba(11,18,32,.85);
+    }
+
+    .divider{
+      height:1px;
+      background:rgba(0,0,0,.10);
+      margin:12px 0;
     }
   </style>
 
@@ -125,7 +163,7 @@
 <body>
 <header>
   <div class="top">
-    <a class="brand" href="/">
+    <a class="brand" href="/" aria-label="Voltar para a página inicial">
       <img src="/logo.png" alt="Logo Terravale Avaliação">
       <div>
         <strong>Terravale Avaliação</strong><br>
@@ -148,6 +186,7 @@
     conforme <strong>ABNT NBR 14653</strong>. Indicado para compra e venda, inventário, divórcio e garantias.
   </p>
 
+  <!-- IMAGEM + BLOCO DE CONFIANÇA (SUBSTITUI A "FIGURA" FRACA) -->
   <div class="card">
     <img
       class="hero-img"
@@ -156,9 +195,27 @@
       loading="lazy"
       decoding="async">
 
-    <p class="muted" style="margin-top:10px">
-      Exemplo ilustrativo de vistoria técnica para laudo de avaliação de imóvel urbano.
-    </p>
+    <div class="trust">
+      <div class="badges" aria-label="Destaques do serviço">
+        <span class="badge">Conforme ABNT NBR 14653</span>
+        <span class="badge">Vistoria técnica no local</span>
+        <span class="badge">Metodologia documentada</span>
+        <span class="badge">Entrega em PDF assinado</span>
+      </div>
+
+      <div class="divider"></div>
+
+      <p class="muted" style="margin:0">
+        Você recebe um <strong>laudo completo</strong> com identificação do imóvel, características físicas,
+        registro fotográfico, premissas, análise e conclusão de valor — pronto para apoiar <strong>negociação</strong>,
+        <strong>inventário</strong>, <strong>divórcio</strong> ou <strong>garantias</strong>.
+      </p>
+
+      <p class="muted" style="margin:0">
+        <strong>Transparência:</strong> antes de iniciar, confirmamos objetivo do laudo e documentação disponível.
+        <strong>Rastreabilidade:</strong> todos os dados e critérios utilizados ficam descritos no relatório.
+      </p>
+    </div>
   </div>
 
   <div class="card">
