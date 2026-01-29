@@ -11,25 +11,66 @@
         content="Laudo de avaliação para divórcio em São Paulo/SP conforme ABNT NBR 14653. Avaliação técnica para partilha de bens com segurança jurídica. Orçamento via WhatsApp." />
 
   <!-- Canonical -->
-  <link rel="canonical"
-        href="https://terravaleavaliacao.com.br/laudo-avaliacao-para-divorcio/" />
+  <link rel="canonical" href="https://terravaleavaliacao.com.br/laudo-avaliacao-para-divorcio/" />
 
-  <!-- Favicon único -->
+  <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" sizes="any">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
-  <meta property="og:title"
-        content="Laudo de Avaliação para Divórcio em São Paulo | Terravale Avaliação" />
-  <meta property="og:description"
-        content="Laudo técnico para divisão patrimonial em processos de divórcio, conforme ABNT NBR 14653." />
-  <meta property="og:url"
-        content="https://terravaleavaliacao.com.br/laudo-avaliacao-para-divorcio/" />
+  <meta property="og:title" content="Laudo de Avaliação para Divórcio em São Paulo | Terravale Avaliação" />
+  <meta property="og:description" content="Laudo técnico para divisão patrimonial em processos de divórcio, conforme ABNT NBR 14653." />
+  <meta property="og:url" content="https://terravaleavaliacao.com.br/laudo-avaliacao-para-divorcio/" />
 
-  <!-- SEU CSS CONTINUA NORMAL ABAIXO -->
-</head>
-
+  <style>
+    :root{
+      --bg:#0b1220; --card:#0f1a33; --muted:#9fb0d0; --text:#eaf0ff;
+      --line:rgba(255,255,255,.12);
+      --btn:#1b2a52; --accent:#6d28d9;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      background:linear-gradient(140deg,#071022,#0b1b38);
+      color:var(--text);
+      line-height:1.5;
+    }
+    header,main,footer{max-width:980px;margin:0 auto;padding:18px}
+    .top{
+      display:flex; gap:14px; align-items:center; justify-content:space-between;
+      border-bottom:1px solid var(--line); padding-bottom:14px;
+    }
+    .brand{display:flex; gap:12px; align-items:center; text-decoration:none; color:inherit}
+    .brand img{width:54px;height:54px;object-fit:contain}
+    .muted{color:var(--muted)}
+    h1{margin:18px 0 10px; font-size:34px}
+    .card{
+      background:rgba(255,255,255,.06);
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:16px;
+      margin:14px 0;
+    }
+    ul{margin:10px 0 0; padding-left:18px}
+    .btn{
+      display:inline-block;
+      padding:12px 14px;
+      border-radius:12px;
+      text-decoration:none;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.06);
+      color:var(--text);
+      font-weight:600;
+      white-space:nowrap;
+    }
+    .btn.primary{
+      background:linear-gradient(135deg,var(--accent),#4f46e5);
+      border-color:transparent;
+    }
+    .btn:hover{filter:brightness(1.05)}
+    footer{border-top:1px solid var(--line); margin-top:18px}
   </style>
 
   <script type="application/ld+json">
@@ -49,6 +90,7 @@
   }
   </script>
 </head>
+
 <body>
 <header>
   <div class="top">
@@ -61,7 +103,7 @@
     </a>
 
     <a class="btn primary" target="_blank" rel="noopener"
-       href="https://wa.me/5511945715195?text=Olá!%20Quero%20orçamento%20para%20laudo%20de%20avaliação%20para%20DIVÓRCIO/PARTILHA.%20Tipo:____%20%7C%20Endereço:____%20%7C%20Finalidade:Divórcio">
+       href="https://wa.me/5511945715195?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20para%20laudo%20de%20avalia%C3%A7%C3%A3o%20para%20DIV%C3%93RCIO%2FPARTILHA.%20Tipo%3A____%20%7C%20Endere%C3%A7o%3A____%20%7C%20Finalidade%3ADiv%C3%B3rcio">
       Orçamento no WhatsApp →
     </a>
   </div>
@@ -97,7 +139,7 @@
 
   <p>
     <a class="btn primary" target="_blank" rel="noopener"
-       href="https://wa.me/5511945715195?text=Olá!%20Quero%20orçamento%20para%20laudo%20de%20avaliação%20para%20DIVÓRCIO/PARTILHA.%20Tipo:____%20%7C%20Endereço:____%20%7C%20Finalidade:Divórcio">
+       href="https://wa.me/5511945715195?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20para%20laudo%20de%20avalia%C3%A7%C3%A3o%20para%20DIV%C3%93RCIO%2FPARTILHA.%20Tipo%3A____%20%7C%20Endere%C3%A7o%3A____%20%7C%20Finalidade%3ADiv%C3%B3rcio">
       Pedir orçamento agora →
     </a>
   </p>
@@ -107,6 +149,8 @@
   <p class="muted">© <span id="y"></span> Terravale Avaliação — São Paulo/SP.</p>
 </footer>
 
-<script>document.getElementById("y").textContent=new Date().getFullYear()</script>
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
