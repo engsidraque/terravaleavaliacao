@@ -15,7 +15,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:title" content="Laudo de Avaliação para Divórcio em São Paulo | Terravale Avaliação" />
-  <meta property="og:description" content="Laudo técnico para partilha de bens em divórcio, conforme ABNT NBR 14653, assinado por engenheiro." />
+  <meta property="og:description" content="Laudo técnico para partilha de bens em divórcio, conforme ABNT NBR 14653, assinado por engenheiro. Orçamento via WhatsApp." />
   <meta property="og:url" content="https://terravaleavaliacao.com.br/laudo-avaliacao-para-divorcio/" />
 
   <!-- Schema -->
@@ -45,6 +45,7 @@
       --line:#e5e7eb;
       --brand:#5b2dd8;
       --brand2:#4c23b5;
+      --soft:#fafafa;
     }
     *{box-sizing:border-box}
     body{
@@ -61,44 +62,110 @@
       background:var(--paper);
     }
     header{border-bottom:1px solid var(--line)}
+    footer{border-top:1px solid var(--line)}
     .top{
-      display:flex; gap:14px; align-items:center; justify-content:space-between; flex-wrap:wrap;
+      display:flex;
+      gap:14px;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
     }
-    .brand{display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit}
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+      color:inherit;
+    }
     .brand img{width:46px;height:46px;object-fit:contain}
     .muted{color:var(--muted)}
-    h1{font-size:32px;margin:14px 0 8px}
-    .sub{margin:0 0 16px;color:var(--muted);max-width:78ch}
     .hero{
       width:100%;
       border-radius:14px;
       border:1px solid var(--line);
+      background:#fff;
       margin:10px 0 18px;
     }
-    .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    h1{font-size:32px;margin:12px 0 8px;letter-spacing:-.2px}
+    .sub{margin:0 0 14px;color:var(--muted);max-width:80ch}
+    .pill{
+      display:inline-block;
+      font-size:12px;
+      padding:4px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      color:var(--muted);
+      background:var(--soft);
+      margin-bottom:10px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
     @media (max-width:860px){.grid{grid-template-columns:1fr}}
     .card{
-      background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:18px;
+      margin:14px 0;
     }
+    .card h2{margin:0 0 10px;font-size:18px}
     ul{margin:10px 0 0;padding-left:18px}
     li{margin:6px 0}
-    .pill{
-      display:inline-block;font-size:12px;padding:4px 10px;border-radius:999px;
-      border:1px solid var(--line);color:var(--muted);background:#fafafa
-    }
     .ctaBar{
-      display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
-      padding:14px;border:1px solid var(--line);border-radius:12px;background:#fafafa;margin:16px 0
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      padding:14px;
+      border:1px solid var(--line);
+      border-radius:12px;
+      background:var(--soft);
+      margin:14px 0 6px;
     }
     .btn{
-      display:inline-block;padding:12px 16px;border-radius:10px;
-      text-decoration:none;font-weight:700
+      display:inline-block;
+      padding:12px 16px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:800;
+      border:1px solid transparent;
+      white-space:nowrap;
     }
     .btn.primary{background:var(--brand);color:#fff}
     .btn.primary:hover{background:var(--brand2)}
-    .btn.ghost{background:#fff;border:1px solid var(--line);color:var(--text)}
-    footer{border-top:1px solid var(--line)}
+    .btn.ghost{background:#fff;border-color:var(--line);color:var(--text)}
+    .btn.ghost:hover{border-color:#d1d5db}
     .small{font-size:13px;color:var(--muted)}
+    .kpis{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0 0}
+    .kpis .pill{margin:0;background:#fff}
+    .warn{
+      border-left:4px solid var(--brand);
+      padding:12px 14px;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:12px;
+      margin:14px 0;
+    }
+    .faq details{
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:12px 14px;
+      margin:10px 0;
+      background:#fff;
+    }
+    .faq summary{cursor:pointer;font-weight:800}
+    .check{
+      display:flex; gap:10px; align-items:flex-start;
+      padding:10px 12px; border:1px solid var(--line); border-radius:12px; background:#fff;
+      margin:10px 0;
+    }
+    .dot{
+      width:10px;height:10px;border-radius:999px;background:var(--brand);margin-top:6px;flex:0 0 auto;
+    }
   </style>
 </head>
 
@@ -114,58 +181,179 @@
     </a>
 
     <a class="btn primary" target="_blank" rel="noopener"
-       href="https://wa.me/5511945715195?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20para%20LAUDO%20DE%20AVALIA%C3%87%C3%83O%20PARA%20DIV%C3%93RCIO%2FPARTILHA.%20Tipo%3A%20____%20%7C%20Endere%C3%A7o%3A%20____">
+       href="https://wa.me/5511945715195?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20para%20LAUDO%20DE%20AVALIA%C3%87%C3%83O%20PARA%20DIV%C3%93RCIO%2FPARTILHA.%20Tipo%3A____%20%7C%20Endere%C3%A7o%3A____%20%7C%20Metragem%3A____%20%7C%20IPTU%2FMatr%C3%ADcula%3A____">
       Orçamento no WhatsApp →
     </a>
   </div>
 </header>
 
 <main>
-  <img src="/avaliacao-imovel-inventario-engenheiro.webp"
-       alt="Laudo de avaliação de imóvel para divórcio assinado por engenheiro em São Paulo"
-       class="hero" />
+  <!-- imagem solicitada (pode manter o mesmo arquivo) -->
+  <img
+    src="/avaliacao-imovel-inventario-engenheiro.webp"
+    alt="Laudo de avaliação de imóvel para divórcio e partilha assinado por engenheiro em São Paulo"
+    class="hero" />
 
-  <span class="pill">Conforme ABNT NBR 14653</span>
+  <span class="pill">Conforme ABNT NBR 14653 • Laudo assinado por engenheiro</span>
 
-  <h1>Laudo de Avaliação para Divórcio e Partilha de Bens</h1>
+  <h1>Laudo de Avaliação para Divórcio e Partilha de Bens (São Paulo)</h1>
   <p class="sub">
-    Indicado para definir o <strong>valor real do imóvel</strong> em processos de divórcio,
-    evitando conflitos, distorções de valor e questionamentos.
-    <br><strong>Laudo técnico assinado por engenheiro.</strong>
+    Se você precisa definir o <strong>valor correto do imóvel</strong> para acordo ou processo de divórcio,
+    este laudo evita “achismos”, reduz conflito na partilha e dá <strong>segurança jurídica</strong>.
+    Ideal para quem quer resolver com clareza e documentar o valor de forma técnica.
   </p>
+
+  <div class="warn">
+    <strong>Importante:</strong> este serviço é para quem realmente precisa de <strong>laudo técnico</strong> (partilha, acordo, processo, advogado/juiz).
+    Se você só quer “um valor por cima”, isso não é a melhor opção.
+  </div>
 
   <div class="ctaBar">
     <div>
-      <strong>Orçamento rápido</strong><br>
-      <span class="small">Envie tipo do imóvel + endereço + metragem.</span>
+      <strong>Orçamento rápido (sem enrolação)</strong><br>
+      <span class="small">Envie no WhatsApp: tipo + endereço + metragem + IPTU/matrícula (se tiver).</span>
+      <div class="kpis">
+        <span class="pill">Atendimento em São Paulo</span>
+        <span class="pill">Vistoria + análise</span>
+        <span class="pill">Documento formal</span>
+      </div>
     </div>
-    <a class="btn primary" target="_blank" rel="noopener"
-       href="https://wa.me/5511945715195?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20para%20LAUDO%20DE%20AVALIA%C3%87%C3%83O%20PARA%20DIV%C3%93RCIO.%20Tipo%3A%20____%20%7C%20Endere%C3%A7o%3A%20____">
-      Falar no WhatsApp →
-    </a>
+
+    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+      <a class="btn primary" target="_blank" rel="noopener"
+         href="https://wa.me/5511945715195?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20para%20LAUDO%20DE%20AVALIA%C3%87%C3%83O%20PARA%20DIV%C3%93RCIO%2FPARTILHA.%20Tipo%3A____%20%7C%20Endere%C3%A7o%3A____%20%7C%20Metragem%3A____%20%7C%20IPTU%2FMatr%C3%ADcula%3A____">
+        Pedir orçamento →
+      </a>
+      <a class="btn ghost" href="#faq">Perguntas frequentes</a>
+    </div>
   </div>
 
   <div class="grid">
     <section class="card">
-      <h2>Quando o laudo é necessário</h2>
+      <h2>Quando esse laudo é indicado</h2>
       <ul>
-        <li>Divórcio judicial ou extrajudicial</li>
-        <li>Partilha de bens com imóvel em comum</li>
-        <li>Evitar disputa por valores irreais</li>
-        <li>Exigência de advogado ou juiz</li>
+        <li>Divórcio judicial ou extrajudicial com <strong>imóvel em comum</strong>.</li>
+        <li>Partilha com divergência de valor (“um acha X, outro acha Y”).</li>
+        <li>Negociação para compra da parte do ex-cônjuge com valor técnico.</li>
+        <li>Solicitação de advogado, juiz ou necessidade de documento formal.</li>
       </ul>
     </section>
 
     <section class="card">
       <h2>O que você recebe</h2>
       <ul>
-        <li>Laudo técnico completo</li>
-        <li>Valor fundamentado e data-base</li>
-        <li>Registro fotográfico</li>
-        <li>Documento pronto para partilha</li>
+        <li><strong>Laudo técnico</strong> com identificação do imóvel e metodologia.</li>
+        <li><strong>Conclusão objetiva</strong> com valor e data-base.</li>
+        <li>Registro fotográfico e caracterização do bem.</li>
+        <li>Documento pronto para embasar acordo/processo de partilha.</li>
       </ul>
+      <p class="small">*A profundidade do laudo varia conforme a finalidade e complexidade do imóvel.</p>
     </section>
   </div>
+
+  <section class="card" id="qualifica">
+    <h2>Antes de chamar no WhatsApp: confirme se é o serviço certo</h2>
+
+    <div class="check">
+      <span class="dot"></span>
+      <div>
+        <strong>Você precisa documentar o valor do imóvel?</strong><br>
+        <span class="small">Se vai usar em acordo, advogado, processo ou para evitar disputa, faz sentido.</span>
+      </div>
+    </div>
+
+    <div class="check">
+      <span class="dot"></span>
+      <div>
+        <strong>O imóvel está em São Paulo/SP?</strong><br>
+        <span class="small">Atendimento focado na cidade e região (informe o bairro).</span>
+      </div>
+    </div>
+
+    <div class="check">
+      <span class="dot"></span>
+      <div>
+        <strong>Você tem pelo menos o endereço e o tipo do imóvel?</strong><br>
+        <span class="small">Com isso já dá para orientar e estimar o escopo do serviço.</span>
+      </div>
+    </div>
+
+    <p style="margin-top:14px">
+      <a class="btn primary" target="_blank" rel="noopener"
+         href="https://wa.me/5511945715195?text=Ol%C3%A1!%20Preciso%20de%20LAUDO%20DE%20AVALIA%C3%87%C3%83O%20PARA%20DIV%C3%93RCIO%2FPARTILHA.%20Tipo%3A____%20%7C%20Endere%C3%A7o%3A____%20%7C%20Metragem%3A____%20%7C%20IPTU%2FMatr%C3%ADcula%3A____%20%7C%20Situa%C3%A7%C3%A3o%3A%20(acordo%2Fprocesso%2Fadvogado)">
+        Confirmar e pedir orçamento →
+      </a>
+    </p>
+  </section>
+
+  <div class="grid">
+    <section class="card">
+      <h2>Etapas do serviço</h2>
+      <ul>
+        <li>1) Briefing (finalidade + dados do imóvel)</li>
+        <li>2) Análise documental do que estiver disponível</li>
+        <li>3) Vistoria e registro fotográfico</li>
+        <li>4) Pesquisa e análise técnica</li>
+        <li>5) Emissão e entrega do laudo</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Documentos (se tiver, ajuda)</h2>
+      <ul>
+        <li>Matrícula do imóvel</li>
+        <li>IPTU (ou cadastro municipal)</li>
+        <li>Planta/área (se houver)</li>
+        <li>Informar se está alugado, ocupado ou desocupado</li>
+      </ul>
+      <p class="small">Se não tiver tudo, sem problema — comece com o básico e a gente orienta.</p>
+    </section>
+  </div>
+
+  <section class="card faq" id="faq">
+    <h2>Perguntas frequentes (para quem está decidindo agora)</h2>
+
+    <details>
+      <summary>Esse laudo serve para divórcio judicial e extrajudicial?</summary>
+      <p class="muted">Em geral, sim. O laudo é direcionado para a finalidade “divórcio/partilha”. Se houver exigência específica do advogado/juiz, informe no WhatsApp para adequação.</p>
+    </details>
+
+    <details>
+      <summary>Por que “assinado por engenheiro” faz diferença?</summary>
+      <p class="muted">Porque aumenta a força técnica do documento e reduz questionamentos sobre o valor. Em partilha, isso ajuda a dar segurança e acelerar decisões.</p>
+    </details>
+
+    <details>
+      <summary>Vocês fazem avaliação de apartamento, casa e terreno?</summary>
+      <p class="muted">Sim. Informe o tipo (casa/apto/terreno), endereço e metragem. Se tiver IPTU/matrícula, melhor ainda.</p>
+    </details>
+
+    <details>
+      <summary>Eu preciso de laudo completo ou só um parecer?</summary>
+      <p class="muted">Se você precisa usar o valor para partilha/acordo/processo, o laudo técnico é o caminho mais seguro. Se for só curiosidade, não vale o custo-benefício.</p>
+    </details>
+
+    <details>
+      <summary>Quanto tempo demora?</summary>
+      <p class="muted">Depende do tipo de imóvel, documentos disponíveis e complexidade. No WhatsApp, com endereço e tipo, já dá para estimar prazo e agendar.</p>
+    </details>
+
+    <details>
+      <summary>O que devo enviar no WhatsApp para agilizar?</summary>
+      <p class="muted"><strong>Tipo + endereço + metragem</strong> e, se tiver, <strong>IPTU ou matrícula</strong>. Se está em acordo ou processo, informe também.</p>
+    </details>
+  </section>
+
+  <section class="ctaBar" style="margin-top:18px">
+    <div>
+      <strong>Pronto para resolver a partilha com clareza?</strong><br>
+      <span class="small">Clique e envie os dados básicos. Se for caso de divórcio/partilha, a conversa já começa objetiva.</span>
+    </div>
+    <a class="btn primary" target="_blank" rel="noopener"
+       href="https://wa.me/5511945715195?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20para%20LAUDO%20DE%20AVALIA%C3%87%C3%83O%20PARA%20DIV%C3%93RCIO%2FPARTILHA.%20Tipo%3A____%20%7C%20Endere%C3%A7o%3A____%20%7C%20Metragem%3A____%20%7C%20IPTU%2FMatr%C3%ADcula%3A____%20%7C%20Situa%C3%A7%C3%A3o%3A%20(acordo%2Fprocesso%2Fadvogado)">
+      Falar no WhatsApp →
+    </a>
+  </section>
 </main>
 
 <footer>
